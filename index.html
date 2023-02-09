@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-dark">
+
+
+    <!-- Bài 1: Tính lương nhân viên -->
+    <div class="container">
+        <div class="card mx-auto my-5">
+            <div class="card-header text-start bg-primary text-white">
+                <h1>Bài 1: Quản lý tuyển sinh</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="diemChuan" placeholder="Điểm chuẩn">
+                    </div>
+                    <div class="col-4">
+                        <select class="col-4 form-select" id="khuVuc">
+                            <option value="0" selected>Không thuộc khu vực ưu tiên</option>
+                            <option value="2">Khu vực ưu tiên A</option>
+                            <option value="1">Khu vực ưu tiên B</option>
+                            <option value="0.5">Khu vực ưu tiên C</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <select class="col-4 form-select" id="doiTuong">
+                            <option value="0" selected>Không thuộc đối tượng ưu tiên</option>
+                            <option value="2.5">Đối tượng ưu tiên 1</option>
+                            <option value="1.5">Đối tượng ưu tiên 2</option>
+                            <option value="1">Đối tượng ưu tiên 3</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control mt-3" id="diemMon1" placeholder="Điểm môn thứ 1">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control mt-3" id="diemMon2" placeholder="Điểm môn thứ 2">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control mt-3" id="diemMon3" placeholder="Điểm môn thứ 3">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-primary mt-3" id="xetDauRotBtn">Kết quả</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span id="dauRotKetQua">></span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="text-white">
+
+    <!-- Bài 2: Tính tiền điện -->
+    <div class="container">
+        <div class="card mx-auto my-5">
+            <div class="card-header text-start bg-primary text-white">
+                <h1>Bài 2: Tính tiền điện</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+                    </div>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="soKw" placeholder="Nhập số kw">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-primary mt-3" id="tinhTienDienBtn">Tính tiền điện</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span id="tienDienKetQua">></span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="text-white">
+
+    <!-- Bài 3: Tính thuế thu nhập cá nhân -->
+    <div class="container">
+        <div class="card mx-auto my-5">
+            <div class="card-header text-start bg-primary text-white">
+                <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="hoTenThue" placeholder="Nhập họ tên">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="thuNhapNam" placeholder="Tổng thu nhập năm">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="nguoiPhuThuoc" placeholder="Số người phụ thuộc">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-primary mt-3" id="tinhTienThueBtn">Tính tiền thuế</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span id="tienThueKetQua">></span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="text-white">
+
+    <!-- Bài 4: Tính tiền cáp -->
+    <div class="container">
+        <div class="card mx-auto my-5">
+            <div class="card-header text-start bg-primary text-white">
+                <h1>Bài 4: Tính tiền cáp</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <select class="form-select" name="loaiKhachHang" id="loaiKhachHang">
+                            <option selected>Chọn loại khách hàng</option>
+                            <option value="nhaDan">Nhà Dân</option>
+                            <option value="doanhNghiep">Doanh nghiệp</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="maKhachHang" placeholder="Nhập mã khách hàng">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="soKenh" placeholder="Số kênh cao cấp">
+                    </div>
+                    <div class="col-4 mt-3">
+                        <input type="number" class="form-control" id="soKetNoi" placeholder="Số kết nối"
+                            style="display:none;">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary mt-3" id="tinhTienCapBtn">Tính tiền cáp</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span id="tienCapKetQua">></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- MAIN JS -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
