@@ -123,11 +123,12 @@ tinhTienThueBtn.onclick = tinhThue;
 var tinhTienCapBtn = document.getElementById('tinhTienCapBtn');
 var tienCapKetQua = document.getElementById('tienCapKetQua');
 var loaiKhachHang = document.getElementById('loaiKhachHang');
+var soKetNoiEle = document.getElementById('soKetNoi');
 
 function anHien() {
-    loaiKhachHang.value === 'doangNghiep'
-        ? soKetNoi.style.display = 'block'
-        : soKetNoi.style.display = 'none';
+    loaiKhachHang.value == 'doanhNghiep'
+        ? soKetNoiEle.style.display = 'block'
+        : soKetNoiEle.style.display = 'none';
 }
 
 function tinhTienCap() {
@@ -141,6 +142,7 @@ function tinhTienCap() {
     switch (loaiKhachHang.value) {
         case 'nhaDan':
             tienCap = 4.5 + 20.5 + soKenh * 7.5;
+            tienCap = new Intl.NumberFormat('VN-vn').format(tienCap);
             tienCapKetQua.innerText = '>Mã khách hàng: ' + maKhachHang + ' .Tiền cáp: ' + tienCap + ' USD';
             break;
         case 'doanhNghiep':
@@ -148,6 +150,7 @@ function tinhTienCap() {
                 ? phiDichVu = 75
                 : phiDichVu = 75 + (soKetNoi - 10) * 5;
             tienCap = 15 + phiDichVu + soKenh * 50;
+            tienCap = new Intl.NumberFormat('VN-vn').format(tienCap);
             tienCapKetQua.innerText = '>Mã khách hàng: ' + maKhachHang + ' .Tiền cáp: ' + tienCap + ' USD';
             break;
         default:
